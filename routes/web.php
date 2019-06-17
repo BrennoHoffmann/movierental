@@ -1,5 +1,5 @@
 <?php
- 
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +21,8 @@ Route::get('register', function(){
 });
 
 Route::get('shopping', "shoppingController@index");
+
+Route::get('actor', "actorController@index");
+
+Route::get('actor/register', "actorController@create");
+Route::post('actor/register', "actorController@create");
