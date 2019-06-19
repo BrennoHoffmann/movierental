@@ -27,4 +27,12 @@ class actorController extends Controller
         $result = $newActor->save();
         return view('registerActor',["result"=>$result]);
     }
+
+    public function edit(Request $request, $id){
+        if($request-> isMethod('GET')){
+            $actor = Actor::find($id);
+
+            return view('editActor', ["actor"=>$actor]);
+        }
+    }
 }

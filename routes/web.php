@@ -26,3 +26,6 @@ Route::get('actor', "actorController@index");
 
 Route::get('actor/register', "actorController@create");
 Route::post('actor/register', "actorController@create");
+Route::get('actor/edit/{id}', "actorController@edit");
+
+Route::get('movie', "movieController@index");

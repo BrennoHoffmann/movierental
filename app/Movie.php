@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    private $table = "movies";
-    private $primaryKey = "filme_id";
+    protected $table = "filme";
+    protected $primaryKey = "filme_id";
+    public $timestamps = false;
 }
