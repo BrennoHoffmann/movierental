@@ -34,5 +34,13 @@ class actorController extends Controller
 
             return view('editActor', ["actor"=>$actor]);
         }
+
+        $actor = Actor::find($request->ator_id);
+        $actor->primeiro_nome = $request->firstName;
+        $actor->ultimo_nome = $request->lastName;
+        $result = $actor->save();
+
+        return view("editActor", ["result"=>$result, "actor"=>$actor]);
+
     }
 }
