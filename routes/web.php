@@ -22,7 +22,7 @@ Route::get('register', function(){
 
 Route::get('shopping', "shoppingController@index");
 
-Route::get('actor', "actorController@index");
+Route::get('actor', "actorController@index")->middleware('checkadmin');
 
 Route::get('actor/register', "actorController@create");
 Route::post('actor/register', "actorController@create");
@@ -38,6 +38,8 @@ Route::post('movie/delete/{id}', "movieController@delete");
 
 Route::get('client/register', "clientController@create");
 Route::post('client/register', "clientController@create");
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

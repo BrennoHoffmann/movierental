@@ -39,6 +39,24 @@
                             </div>
                         </div>
 
+
+
+                        <div class="form-group row">
+                            <label for="level_user" class="col-md-4 col-form-label text-md-right">Level User</label>
+
+                            <div class="col-md-6">
+                                <input id="level_user" type="number" class="form-control @error('level_user') is-invalid @enderror" name="level_user" value="{{ old('level_user') }}" >
+
+                                @error('level_user')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
